@@ -35,10 +35,9 @@ const NavBar = () => {
 					<li
 						key={id}
 						className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'
+						title={name}
 					>
-						<a href={link}>
-							{icon}
-						</a>
+						<a href={link} target='_blank'>{icon}</a>
 					</li>
 				))}
 			</ul>
@@ -55,7 +54,12 @@ const NavBar = () => {
 							key={id}
 							className='px-4 cursor-pointer capitalize py-6 text-4xl justify-center items-center'
 						>
-							<a href={link} target='_blank' className='grid justify-items-center' rel='noreferrer'>
+							<a
+								href={link}
+								target='_blank'
+								className='grid justify-items-center'
+								rel='noreferrer'
+							>
 								{name}
 								{icon}
 							</a>
