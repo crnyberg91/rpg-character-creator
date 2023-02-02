@@ -28,7 +28,7 @@ const NavBar = () => {
 	];
 
 	return (
-		<div className='flex justify-between items-center w-full h-20 text-red-600 fixed bg-black border-red-600 border-b-4 px-4'>
+		<div className='flex justify-between items-center w-full h-20 text-stone-200 static bg-black border-stone-200 border-b-4 px-4'>
 			<h1 className='text-5xl font-signature ml-2'>RPG Character Sheet</h1>
 			<ul className='hidden md:flex'>
 				{links.map(({ id, name, icon, link }) => (
@@ -37,7 +37,9 @@ const NavBar = () => {
 						className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'
 						title={name}
 					>
-						<a href={link} target='_blank'>{icon}</a>
+						<a href={link} target='_blank'>
+							{icon}
+						</a>
 					</li>
 				))}
 			</ul>
